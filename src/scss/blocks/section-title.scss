@@ -47,12 +47,12 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
-      background-color: $section-bg;
+      background-color: $white;
       &::after{
         position: absolute;
         display: block;
         content: '';
-        width: calc(100% - 40px);
+        width: calc(100% - 15px);
         height: 1px;
         background-color: $brd-c;
         top: 42%;
@@ -60,15 +60,20 @@
       }
       & .section-title__text,
       & .section-title__description{
-        background-color: $section-bg;
+        background-color: $white;
       }
       & .section-title__text{
-        padding: 20px 30px 20px;
+        padding: 20px 15px 20px;
       }
       & .section-title__description{
         max-width: none;
         padding-top: 5px;
         padding-right: 20px;
+      }
+    }
+    &--blogs-slider{
+      &::after{
+        width: calc(100% - 40px);
       }
     }
   }

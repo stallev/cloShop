@@ -21,6 +21,7 @@
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
+			padding: 10px 0;
 		}
 		&__item{
 			position: relative;
@@ -30,7 +31,7 @@
 			display: block;
 			padding: 15px 10px;
 			font-size: 1.3rem;
-			color: #fff;
+			color: $titleColor;
 			font-weight: 500;
 			transition: all .3s ease-in-out;
 			text-transform: uppercase;
@@ -41,23 +42,23 @@
 					position: absolute;
 					display: block;
 					content: '';
-					top: 50%;
-					right: 4px;
+					top: 46%;
+					right: 2px;
 					width: 5px;
 					height: 1px;
 					transform: rotate(45deg);
-					background-color: $white;
+					background-color: $titleColor;
 				}
 				&::before{
 					position: absolute;
 					display: block;
 					content: '';
-					top: 50%;
-					right: 1px;
+					top: 46%;
+					right: -1px;
 					width: 5px;
 					height: 1px;
 					transform: rotate(-45deg);
-					background-color: $white;
+					background-color: $titleColor;
 				}
 			}
 			&--sub-nav{
@@ -66,7 +67,7 @@
 				padding: 6px 0;
 				font-size: 1.4rem;
 				transition: all .3s ease-in-out;
-				color: $content-color;
+				color: $titleColor;
 			}
 		}
 		&__sub1-list{
@@ -74,7 +75,7 @@
 			top: 40px;
 			opacity: 0;
 			visibility: hidden;
-			background-color: #fff;
+			background-color: $headerBottomBgColor;
 			pointer-events: none;
 			width: max-content;
 			padding: 15px 20px;
@@ -94,20 +95,20 @@
   }
 	.nav__item:hover{
 		& a.nav__link{
-			color: $yellow;
+			color: $red;
 			&::before, &::after{
-				background-color: $yellow;
+				background-color: $red;
 			}
 		}
 		& .nav__sub1-list{
-			color: $content-color;
+			color: $titleColor;
 		}
 	}
 	a.nav__link--sub-nav{
-		color: $content-color;
+		color: $titleColor;
 	}
 	.nav__sub1-item:hover a{
-		color: $yellow;
+		color: $red;
 	}
 	.nav__list .nav__item:first-of-type .nav__link{
 		padding-left: 0;

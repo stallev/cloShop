@@ -1,7 +1,7 @@
 .discounts{
-  background-color: $section-bg;
+  background-color: $white;
   & .main-slider__slick-dots{
-    bottom: -15px;
+    bottom: 15px;
   }
   &__content{
     display: flex;
@@ -11,6 +11,7 @@
     padding-bottom: 60px;
   }
   &__slider{
+    padding-bottom: 40px;
     &-slick-dots{
       position: absolute;
       display: flex;
@@ -45,10 +46,35 @@
     }
   }
 }
-.discount-prev,
-.discount-next{
-  display: none;
+//стили управляющих стрелок слайдера товаров
+.discounts__slider-prev,
+.discounts__slider-next{
+  position: absolute;
+  display: inline-block;
+  padding: 7px 12px;
+  border: 2px solid $delColor;
+  top: 145px;
+  font-size: 2rem;
+  color: $delColor;
+  transition: all .3s ease;
+  &:hover{
+    border-color: $red;
+    color: $red;
+  }
 }
+.discounts__slider-prev{
+  left: 0px;
+  z-index: 9;
+}
+.discounts__slider-next{
+  right: 0px;
+}
+// .discounts__slider:hover .discounts__slider-prev
+// .discounts__slider:hover .discounts__slider-next{
+//   opacity: 1;
+//   visibility: visible;
+// }
+
 .discounts__slider{
   position: relative;
   & .slick-slide {
@@ -71,9 +97,7 @@
 }
 @media only screen and (min-width: 991px){
   .discounts{
-    padding-bottom: 50px;
     &__slider-wrap{
-      width: 48%;
       flex-grow: 2;
       margin-left: 27px;
       padding-bottom: 0;

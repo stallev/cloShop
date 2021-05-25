@@ -10,9 +10,19 @@
   }
 }
 @mixin colorOnHover {
-  transition: color .4s ease-in-out;
+  transition: color .3s ease-in-out;
     &:hover{
-      color: $red;
+      background-color: $red;
+      color: $white;
+    }
+}
+@mixin btnColor{
+  background: $btnBgColor;
+  color: $white;
+  transition: color .3s ease-in-out;
+    &:hover{
+      background-color: $red;
+      color: $white;
     }
 }
 @mixin absoluteYCenter {

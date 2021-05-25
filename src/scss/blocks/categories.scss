@@ -71,7 +71,7 @@
       justify-content: space-around;
     }
     &__item{
-      width: 18%;
+      width: 23%;
     }
     &__item-media{
       height: calc(100% - 55px);
@@ -88,12 +88,6 @@
 }
 @media only screen and (min-width: 991px){
   .categories{
-    &__item{
-      width: 18%;
-    }
-    &__item-media{
-      //height: calc(100% - 90px);
-    }
     &__item-img-wrap{
       max-height: none;
     }

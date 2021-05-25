@@ -41,7 +41,7 @@
   cursor: pointer;
   z-index: 1000;
 }
-.catalog-sidebar__icon-close,
+
 .mobile-nav__icon-close,
 .mini-cart__icon-close{
   @include closeBtn(#222);

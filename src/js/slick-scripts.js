@@ -24,28 +24,33 @@ if($('.main-slider__list')){
 }
 
 //слайдер на главной в сеции скидок
-if($('.discounts__sliders')){
+
+
+if($('.test')){
+  $('.test').slick({
+    slidesToShow: 4
+  });
+}
+if($('.discounts__slider')){
   $('.discounts__slider').slick({
-    slidesToShow: 3,
+    slidesToShow: 5,
     margin: 45,
     slidesToScroll: 1,               
     dots: false,
     infinite: true,
-    prevArrow:'<button class="discount-prev"><i class="far fa-angle-left"></i></button>',
-    nextArrow:'<button class="discount-next"><i class="far fa-angle-right"></i></button>',
+    prevArrow:'<button class="discounts__slider-prev"><i class="far fa-angle-left"></i></button>',
+    nextArrow:'<button class="discounts__slider-next"><i class="far fa-angle-right"></i></button>',
     responsive: [
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 4,
         }
       },
       {
         breakpoint: 993,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
           arrows: false,
           dots: true,
           dotsClass: 'main-slider__slick-dots',
@@ -64,8 +69,8 @@ if($('.discounts__sliders')){
       {
         breakpoint: 575,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           arrows: false,
           dots: true,
           dotsClass: 'main-slider__slick-dots',
@@ -75,7 +80,7 @@ if($('.discounts__sliders')){
         breakpoint: 400,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           arrows: false,
           dots: true,
           dotsClass: 'main-slider__slick-dots',
@@ -92,7 +97,7 @@ if($('.discounts__sliders')){
 //слайдер на главной в секции блога
 if($('.blog-section__slider')){
   $('.blog-section__slider').slick({
-    slidesToShow: 5,
+    slidesToShow: 4,
     margin: 45,
     slidesToScroll: 1,               
     dots: false,

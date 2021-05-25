@@ -1,12 +1,74 @@
 .header{
-	background-color: $header-top-bg;
+	&__upper-top-inner{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.3rem;
+		line-height: 1.3;
+	}
+	&__shedule{
+		margin-bottom: 10px;
+	}
 	&__search-container{
 		display: none;
 	}
 	&__top{
-		background-color: $header-top-bg;
+		background-color: $white;
 	}
 	&__bottom{
+		display: none;
+	}
+	&__top-left{
+		order: 2;
+	}
+	&__menu-open-btn{
+		order: 3;
+	}
+	&__phones{
+		margin-bottom: 3vw;
+		text-align: center;
+		order: 1;
+	}
+	&__phones-number{
+		position: relative;
+		display: block;
+		width: fit-content;
+		margin: 0 auto;
+		padding-left: 7vw;
+		font-size: 5vw;
+		color: $textColor;
+		transition: color .3s ease;
+		&:nth-of-type(1){
+			margin-bottom: 3vw;
+		}
+		&:hover{
+			color: $red;
+		}
+		&:hover::before{
+			color: $red;
+		}
+		&::before{
+			position: absolute;
+			display: block;
+			content: '\f2a0';
+			left: 0;
+			color: $textColor;
+			font-family: 'Font Awesome 5 Pro';
+			font-weight: 400;
+			font-size: 5vw;
+			cursor: pointer;
+			@include absoluteYCenter;
+		}
+	}
+	&__action-block{
+		margin-bottom: 10px;
+	}
+	&__action-block-call-wrap{
+		display: flex;
+		justify-content: center;
+	}
+	&__middle-wrap{
 		display: none;
 	}
 	&__cart-area{
@@ -18,23 +80,117 @@
 		margin-left: auto;
 		padding: 4px 8px;
 		border-radius: 4px;
-		border: 1px solid $white;
-		color: $white;
+		border: 2px solid #222;
+		color: #222;
 		font-size: 1.7rem;
 		text-align: center;
 		cursor: pointer;
 		transition: all .3s ease;
 		&:hover{
 			color: $red;
-			border: 1px solid $red;
+			border: 2px solid $red;
 		}
 	}
 }
 
+@media only screen and (min-width: 575px){
+	.header{
+		&__action-block{
+			margin-bottom: 0;
+		}
+		&__top-left{
+			order: initial;
+		}
+		&__menu-open-btn{
+			order: initial;
+		}
+		&__phones{
+			display: flex;
+			flex-direction: column;
+			order: initial;
+			margin-bottom: 20px;
+		}
+		&__phones-number{
+			font-size: 1.9rem;
+			padding-left: 2.3rem;
+			&:nth-of-type(1){
+				margin-bottom: 1.2rem;
+			}
+			&::before{
+				display: block;
+				font-size: 1.9rem;
+				cursor: pointer;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 767px){
+	.header{
+		&__action-block{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		&__phones{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 0;
+		}
+		&__phones-number{
+			font-size: 1.6rem;
+			padding-left: 1.8rem;
+			&:nth-of-type(1){
+				margin-bottom: 15px;
+			}
+			&::before{
+				display: block;
+				font-size: 1.6rem;
+				cursor: pointer;
+			}
+		}
+	}
+}
 @media only screen and (min-width: 991px){
 	.header{
+		&__upper-top-inner{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 1.5rem;
+		}
+		&__shedule{
+			flex-shrink: 0;
+			width: 280px;
+			margin-bottom: 0;
+		}
+		&__search-container{
+			display: none;
+		}
 		&__menu-open-btn{
 			display: none;
+		}
+		&__phones-number{
+			font-size: 1.8rem;
+			line-height: 1.7;
+			padding-left: 1.89rem;
+			margin: 0;
+			margin-right: 30px;
+			&:nth-of-type(1){
+				margin-bottom: 0;
+			}
+			&::before{
+				display: block;
+				font-size: 1.8rem;
+				cursor: pointer;
+			}
+		}
+		&__action-block-call-wrap{
+			margin-right: 30px;
+		}
+		&__middle-wrap{
+			display: block;
 		}
 		&__middle{
 			display: flex;
@@ -43,7 +199,7 @@
 		}
 		&__search-container{
 			display: block;
-			background-color: $white;
+			background-color: $headerBottomBgColor;
 			border-radius: 5px;
 		}
 		&__search-box{
@@ -51,13 +207,13 @@
 		}
 		&__search-submit-btn{
 			display: inline-block;
-			background: $yellow;
 			padding: 10px 15px;
 			border-radius: 0 5px 5px 0;
+			@include btnColor;
 		}
 		&__select-block{
 			position: relative;
-			padding-right: 15px;
+			padding-right: 5px;
 			&::before{
 				content: "";
 				width: 1px;
@@ -71,20 +227,21 @@
 		}
 		&__search-field{
 			display: inline-block;
+			flex-grow: 5;
 			border: 0;
 			background: inherit;
 			height: 50px;
 			color: #222222;
 			font-size: 1.4rem;
 			font-weight: 400;
-			padding: 0 105px 0 20px;
+			padding: 0 10px 0 10px;
 		}
 		&__form{
 			display: flex;
 		}
 		&__bottom{
 			display: block;
-			background-color: $dark-blue;
+			background-color: $headerBottomBgColor;
 			z-index: 12;
 		}
 	}
@@ -93,5 +250,13 @@
 	position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: $headerBottomBgColor;
+}
+
+@media only screen and (min-width: 1199px){
+	.header{
+		&__phones{
+			flex-direction: row;
+		}
+	}
 }

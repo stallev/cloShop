@@ -170,10 +170,12 @@ $arrow_color: $gray !default;
   }
 }
 
-//custom css
-.header__select-category,
+
+
+//custom css,
 .select-box__options{
   display: inline-block;
+  background-color: $headerBottomBgColor;
   height: 100%;
   font-size: 1.4rem;
 	font-weight: 400;
@@ -182,9 +184,9 @@ $arrow_color: $gray !default;
   border: none;
 }
 .nice-select.open .list{
-  background-color: $white;
+  background-color: $headerBottomBgColor;
 }
-.header__select-category .option,
+
 .select-box__options .option {
   cursor: pointer;
   font-weight: 400;
@@ -200,7 +202,7 @@ $arrow_color: $gray !default;
     background-color: #f6f6f6;
   }
 }
-.header__select-category .option.focus,
+
 .select-box__options .option.focus{
   background-color: #fff;
 }

@@ -41,16 +41,7 @@
   }
   &__submit-btn{
     display: block;
-    padding: 10px 15px;
-    font-weight: 700;
-    background-color: $red;
-    color: $white;
-    text-transform: uppercase;
-    transition: background-color .4s ease-in-out;
-    &:hover{
-      cursor: pointer;
-      background-color: #999;
-    }
+    @include submitBtn;
   }
 }
 @media only screen and (min-width: 400px){

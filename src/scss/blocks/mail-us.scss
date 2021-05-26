@@ -1,4 +1,7 @@
 .mail-us{
+  &__info{
+    margin-bottom: 20px;
+  }
   &__title{
     margin-bottom: 10px;
     font-size: 2rem;
@@ -13,10 +16,9 @@
     line-height: 2.6rem;
   }
   &__contacts-item{
-    margin-bottom: 20px;
+    margin-top: 20px;
   }
   &__contacts-item-title{
-    margin-bottom: 10px;
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.4rem;
@@ -25,10 +27,13 @@
   }
   &__contacts-item-content{
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 2.6rem;
     cursor: pointer;
-    @include colorOnHover;
+    transition: all .3s ease;
+    &:hover{
+      color: $red;
+    }
   }
   &__form-wrap{
     //padding: 20px 0 50px;

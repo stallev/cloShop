@@ -2,6 +2,9 @@
   background-color: $white;
   padding-bottom: 10px;
 }
+.products-list__wrap--catalog{
+  margin-left: 7.5px;
+}
 .products-list{
   &__inner{
     display: flex;
@@ -23,6 +26,7 @@
   &__part-nav-link{
     display: inline-block;
     margin: 0 10px;
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 1.3rem;
     color: #222;
@@ -212,6 +216,7 @@
 @media only screen and (min-width: 991px){
   .products-list{
     &__wrap--catalog{
+      margin-left: 0;
       padding-left: 20px;
     }
     &__controls-list{

@@ -175,6 +175,7 @@
     }
   }
   &__price{
+    display: none;
     font-weight: 500;
     & span{
       display: inline-block;

@@ -1,5 +1,10 @@
 .testimonials{
+  padding-top: 20px;
+  padding-bottom: 70px;
   background-color: rgb(246, 247, 249);
+  & .main-slider__slick-dots{
+    bottom: -35px;
+  }
 }
 //расстояние между слайдами
 .testimonials__list {

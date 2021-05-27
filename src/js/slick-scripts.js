@@ -207,6 +207,7 @@ if($('.testimonials__list')){
           slidesToShow: 2,
           slidesToScroll: 1,
           dots: true,
+          dotsClass: 'main-slider__slick-dots',
         }
       },
       {

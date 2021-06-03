@@ -12,7 +12,7 @@ if(filtrsTogggleBtns&&leftCatalogSidebar){
     filtrsTogggleBtn => {
       filtrsTogggleBtn.addEventListener('click', function(e){
         e.preventDefault();
-        if(document.documentElement.clientWidth<993){
+        if(document.documentElement.clientWidth<991){
           document.querySelector('body').classList.toggle('sidebar-active');
           returnSidebarBtn.style.display = 'inline-block';
         }
@@ -27,7 +27,7 @@ if(filtrsTogggleBtns&&leftCatalogSidebar){
     leftCatalogSidebar.classList.remove('closed-left-sidebar');
     returnSidebarBtn.style.display = 'none';
   });
-  if(document.documentElement.clientWidth<993){
+  if(document.documentElement.clientWidth<991){
     closeSidebarBtn.addEventListener('click', function(){
       document.querySelector('body').classList.toggle('sidebar-active');
       returnSidebarBtn.style.display = 'inline-block';
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     priceFiltr.noUiSlider.on('update', function (values, handle) {
       inputs[handle].innerHTML = String(Math.round(values[handle]))+'р';
     });
-    
+
 
   }
 });
@@ -191,7 +191,7 @@ if(productList&&productListViewControls){
   let gridViewBtn = document.querySelector('.products-list__controls-to-grid');
   let columnViewBtn = document.querySelector('.products-list__controls-to-column');
   let productCards = productList.querySelectorAll('.product-card');
-  
+
   if(gridViewBtn){
     gridViewBtn.addEventListener('click', function(e){
       gridViewBtn.classList.add('products-list__controls-to-grid--active');

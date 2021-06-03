@@ -10,6 +10,7 @@ if(bg__elements){
 //слайдер в шапке на главной странице
 if($('.main-slider__list')){
   $('.main-slider__list').slick({
+    lazyLoad: 'ondemand',
     slidesToShow: 1,
     slidesToScroll: 1,               
     dots: true,

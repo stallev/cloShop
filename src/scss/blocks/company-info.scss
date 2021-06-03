@@ -2,6 +2,12 @@
   &__block{
     margin-bottom: 20px;
   }
+&__phone-form-wrap{
+  width: 100%;
+  & .phone-form__submit-btn{
+    margin-left: auto;
+  }
+}
   &__block-title{
     padding: .6rem 0;
     margin-bottom: .9rem;

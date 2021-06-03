@@ -62,12 +62,7 @@
 				}
 			}
 			&--sub-nav{
-				display: block;
-				font-weight: 400;
-				padding: 6px 0;
-				font-size: 1.4rem;
-				transition: all .3s ease-in-out;
-				color: $titleColor;
+				
 			}
 		}
 		&__sub1-list{
@@ -86,12 +81,12 @@
 			}
 		}
   }
-  
   .nav__item:hover .nav__sub1-list {
     border-top: 35px;
     opacity: 1;
     visibility: visible;
     pointer-events: all;
+		color: $content-color;
   }
 	.nav__item:hover{
 		& a.nav__link{
@@ -100,7 +95,7 @@
 				background-color: $red;
 			}
 		}
-		& .nav__sub1-list{
+		& .nav__sub1-list a.nav__link{
 			color: $titleColor;
 		}
 	}
@@ -112,5 +107,17 @@
 	}
 	.nav__list .nav__item:first-of-type .nav__link{
 		padding-left: 0;
+	}
+}
+.nav .nav__sub1-list a.nav__link{
+	display: block;
+	font-weight: 400;
+	padding: 6px 0;
+	font-size: 1.4rem;
+	transition: all .3s ease-in-out;
+	color: $titleColor;
+	text-transform: none;
+	&:hover{
+		color: $red;
 	}
 }

@@ -2,6 +2,11 @@
 let orderBtns = document.querySelectorAll('.order-btn');
 let orderFormCloseBtn = document.querySelector('.order-form__icon-close-wrap');
 let orderFormOverlay = document.querySelector('.order-form__overlay');
+let orderFormSubmitBtns = document.querySelectorAll('.order-form__submit');
+function closeOrderForm(){
+  document.body.classList.remove('order-form-view');
+}
+
 if(orderBtns){
   orderBtns.forEach(
     btn => {
@@ -12,14 +17,23 @@ if(orderBtns){
     }
   )
 }
+if(orderFormSubmitBtns){
+  orderFormSubmitBtns.forEach(
+    btn => {
+      btn.addEventListener('click', function(e){
+        setTimeout(closeOrderForm, 100);;
+      })
+    }
+  )
+}
 if(orderFormCloseBtn){
   orderFormCloseBtn.addEventListener('click', function(){
-    document.body.classList.remove('order-form-view');
+    closeOrderForm();
   });
 }
 if(orderFormOverlay){
   orderFormOverlay.addEventListener('click', function(){
-    document.body.classList.remove('order-form-view');
+    closeOrderForm();
   });
 }
 

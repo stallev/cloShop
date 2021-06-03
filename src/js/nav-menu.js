@@ -60,7 +60,15 @@ if(header){
 	})();
 }
 
-
+let navLinkSubMenus = document.querySelectorAll('.nav__sub1-list');
+if(navLinkSubMenus){
+	navLinkSubMenus.forEach(
+		sublist=>{
+			let mainLink = sublist.previousElementSibling;
+			mainLink.classList.add('nav__link--subtitle');
+		}
+	)
+}
 
 
 // Меню бургер
@@ -114,26 +122,4 @@ if(footerMenu&&(screenWidth<769)){
 		}
 		scrollPos = st;
  });
-}
-
-//появление корзины
-
-
-const iconCart = document.querySelector('.mini-cart__header');
-const closeCartBtn = document.querySelector('.mini-cart__icon-close');
-const navCartOverlay = document.querySelector('.mobile-nav-under-cart');
-if (iconCart) {
-	iconCart.addEventListener("click", function (e) {
-		document.body.classList.add('_lock-cart');
-	});
-}
-if (closeCartBtn) {
-	closeCartBtn.addEventListener("click", function (e) {
-		document.body.classList.remove('_lock-cart');
-	});
-}
-if(navCartOverlay){
-	navCartOverlay.addEventListener("click", function (e) {
-		document.body.classList.remove('_lock-cart');
-	});
 }

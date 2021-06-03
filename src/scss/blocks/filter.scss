@@ -4,7 +4,7 @@
     padding: 14px 20px 14px 2px;
     border-bottom: 1px solid $brd-c;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     color: $content-color;
     cursor: pointer;
@@ -19,8 +19,9 @@
     transition: height .4s ease-in-out;
   }
   &__option-link{
-    display: block;
-    padding: 10px 0 10px 10px;
+    display: inline-block;
+    padding: 10px 15px 10px 10px;
+    width: 91%;
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: $content-color;
@@ -41,7 +42,7 @@
     margin-bottom: 5px;
     padding-right: 10px;
     border-left: 1px solid rgb(238, 238, 238);
-    transition: all .4s ease-in; 
+    transition: all .4s ease-in;
     animation-name: appearSublist-animation;
     animation-duration: 7s;
     & li{

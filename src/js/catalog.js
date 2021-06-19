@@ -43,20 +43,20 @@ if(catalogSidebarOverlay){
 
 //скрываем и закрываем списки фильтров
 //показываем и скрываем списки и подменю
-let filterItemsControls = document.querySelectorAll('.filter__title.sublist-title');
-if(filterItemsControls){
-	filterItemsControls.forEach(
-		element => {
-			element.addEventListener('click', function(e){
-				e.preventDefault();
-				e.target.querySelector('.hidden-items-control')
-				e.target.querySelector('.hidden-items-control').classList.toggle('open-state');
-				let sublist = e.target.closest('.sublist-title').nextSibling.nextElementSibling;
-				sublist.classList.toggle('hidden-items');
-			})
-		}
-	)
-}
+// let filterItemsControls = document.querySelectorAll('.filter__title.sublist-title');
+// if(filterItemsControls){
+// 	filterItemsControls.forEach(
+// 		element => {
+// 			element.addEventListener('click', function(e){
+// 				e.preventDefault();
+// 				e.target.querySelector('.hidden-items-control')
+// 				e.target.querySelector('.hidden-items-control').classList.toggle('open-state');
+// 				let sublist = e.target.closest('.sublist-title').nextSibling.nextElementSibling;
+// 				sublist.classList.toggle('hidden-items');
+// 			})
+// 		}
+// 	)
+// }
 
 //изменяем чекбоксы в фильтре
 let chkboxFilterLinks = document.querySelectorAll('.filter__options-list--chkbox .filter__option-link');

@@ -111,6 +111,19 @@ input{
     margin-right: 15px;
     color: #757575;
   }
+  &__hidden{
+    // width: 100%;
+    // padding: 15px 20px;
+    // color: $textColor;
+    // border: 1px solid $delColor;
+    // border-radius: 10px;
+    // font-size: 1.8rem;
+    // margin-bottom: 5px;
+    display: none;
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
   &__submit{
     display: block;
     width: 100%;
@@ -118,6 +131,15 @@ input{
     border-radius: 10px;
     @include submitBtn;
   }
+}
+.count-product-field-wrap{
+  display: inline-block;
+  border: 1px solid #222;
+}
+.count-product-field{
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.7rem;
 }
 .order-form__form .order-form__submit{
   padding: 15px 20px;

@@ -10,6 +10,9 @@
     cursor: pointer;
   }
   &__option-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: none;
     &:last-of-type{
       border-bottom: none;

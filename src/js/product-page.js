@@ -267,7 +267,7 @@ if(productNavTabLinks&&productNavTabs){
 if($('.product__main-slider-item')){
   $('.product__main-slider-item').each(function(){
     $(this).zoom({
-      magnify: 2
+      magnify: .9
     }
     );
   });
